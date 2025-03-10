@@ -1,0 +1,80 @@
+# Libraries and Methods Used in the Project
+
+## Libraries Used
+
+This project utilizes several Python libraries, each serving a specific purpose in data processing, visualization, and machine learning.
+
+### **NumPy**
+
+- A fundamental package for scientific computing in Python.
+- Provides support for multi-dimensional arrays and matrix operations.
+- Used for numerical computations, such as handling dataset transformations efficiently.
+
+### **Pandas**
+
+- A data manipulation and analysis library.
+- Provides DataFrames for structured data storage and processing.
+- Used for handling and preprocessing datasets, such as loading, filtering, and transforming data.
+
+### **Matplotlib**
+
+- A visualization library used to create static, animated, and interactive plots.
+- Helps in understanding data distributions and model performance.
+- Used for generating scatter plots, histograms, and decision boundary visualizations.
+
+### **Seaborn**
+
+- Built on top of Matplotlib, it provides a high-level interface for creating visually appealing statistical graphics.
+- Used for generating heatmaps, pair plots, and enhanced data visualizations to analyze feature relationships.
+
+### **Scikit-learn**
+
+- A machine learning library providing simple and efficient tools for data mining and analysis.
+- Includes implementations of various ML algorithms and utilities for preprocessing and evaluation.
+- Used for:
+  - Generating synthetic datasets (`make_circles`).
+  - Data standardization using `StandardScaler`.
+  - Implementing the SVM classifier (`SVC`).
+  - Splitting data into training and testing sets (`train_test_split`).
+  - Evaluating the model using classification reports and other metrics.
+
+## Key Methods Used
+
+### **Dataset Generation**
+
+- `make_circles(n_samples, noise, factor)`:
+  - Generates a synthetic dataset consisting of concentric circles.
+  - Useful for testing non-linear classifiers like SVM with the RBF kernel.
+
+### **Data Preprocessing**
+
+- `StandardScaler().fit_transform(X)`:
+  - Standardizes features by removing the mean and scaling to unit variance.
+  - Improves SVM model performance by ensuring features have equal influence.
+
+### **Model Training and Evaluation**
+
+- `SVC(kernel='rbf', C=1.0, gamma='scale')`:
+
+  - Implements the Support Vector Machine classifier with an RBF kernel.
+  - Finds the optimal hyperplane for non-linearly separable data.
+
+- `train_test_split(X, y, test_size=0.2, random_state=42)`:
+
+  - Splits the dataset into training and testing subsets.
+  - Helps in evaluating model performance on unseen data.
+
+- `model.fit(X_train, y_train)`:
+
+  - Trains the SVM model using the training data.
+
+- `model.predict(X_test)`:
+
+  - Makes predictions on the test dataset.
+
+- `classification_report(y_test, y_pred)`:
+
+  - Generates a detailed classification report, including precision, recall, and F1-score for each class.
+
+
+
